@@ -2,7 +2,7 @@
     package="com.example.myflutterapp">
     
     <application
-        android:name="io.flutter.app.FlutterApplication"
+        android:name="${applicationName}"
         android:label="my_flutter_app"
         android:icon="@mipmap/ic_launcher">
         <activity
