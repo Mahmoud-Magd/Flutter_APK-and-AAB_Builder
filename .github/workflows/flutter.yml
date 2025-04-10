@@ -12,11 +12,11 @@ on:
         required: false
         default: "false"
 
-  push:
-    branches: []   # No auto-runs on push
-
-  pull_request:
-    branches: []   # No auto-runs on PRs
+    push:
+      branches: []   # No auto-runs on push
+    
+    pull_request:
+      branches: []   # No auto-runs on PRs
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.19.0'
+        flutter-version: 'stable'
 
     - name: Install dependencies
       run: flutter pub get
@@ -55,3 +55,6 @@ jobs:
       with:
         name: app-release.aab
         path: build/app/outputs/bundle/release/app-release.aab
+        
+        
+        
