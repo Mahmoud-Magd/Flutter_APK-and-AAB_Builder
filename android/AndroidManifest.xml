@@ -2,6 +2,7 @@
     package="com.example.myflutterapp">
     
     <application
+        android:name="io.flutter.app.FlutterApplication"
         android:label="my_flutter_app"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -9,13 +10,22 @@
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
+            <meta-data
+                  android:name="io.flutter.embedding.android.NormalTheme"
+                  android:resource="@style/NormalTheme"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <meta-data
+              android:name="flutterEmbedding"
+              android:value="2" />   <!-- Critical: Must be "2" -->
     </application>
 </manifest>
+
+
+
